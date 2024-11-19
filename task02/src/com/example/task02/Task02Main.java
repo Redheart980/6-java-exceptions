@@ -15,8 +15,9 @@ public class Task02Main {
                 throw new IllegalArgumentException(String.valueOf(monthNumber));
         }
         catch (IllegalArgumentException argumentException){
-            //return "monthNumber " + monthNumber + " is invalid, month number should be between 1..12";
-            return "monthNumber " + argumentException.getMessage() + " is invalid, month number should be between 1..12";
+            String error = "monthNumber " + argumentException.getMessage() + " is invalid, month number should be between 1..12";
+            System.out.println(error);
+            //throw new IllegalArgumentException(argumentException);
         }
         switch (monthNumber){
             case 1:
